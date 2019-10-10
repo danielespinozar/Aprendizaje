@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transsiciones CSS</title>
+    <style>
+        body {
+            /* Para que el elemento se acomode a tamaños de pantalla distintos */
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .pelota {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            /* background-color: red; */
+            transition: 1s;
+            /* Propiedad para que reacciones mas suave */
+            /* transition-timing-function: ease; */
+            /* Asi los elementos se ubicaran uno sobrepuesto del otro */
+            position: absolute;
+            display: flex;
+            /* Alineado vertical */
+            align-items: center;
+            /* Alineado horizontal */
+            justify-content: center;
+            color: white;
+
+
+        }
+
+        .pelota.a {
+            background: red;
+            left: 0;
+        }
+
+        .pelota.b {
+            background: blue;
+            right: 0;
+        }
+/* 
+        .pelota:hover {
+            width: 200px;
+            height: 200px;
+        } */
+
+        .canasta {
+            border: 1px solid red;
+            /* Aqui le digo que los absolutos esten dentro de la canasta */
+            position: relative;
+            height: 100px;
+            width: 100%;
+        }
+
+        .canasta:hover .pelota.a {
+            left: calc(50% - 100px);
+        }
+
+        .canasta:hover .pelota.b {
+            right: calc(50% - 100px);
+            
+        }
+    </style>
+    <div class="canasta">
+        <div class="pelota a">Hola</div>
+        <div class="pelota b">Mundo</div>
+
+    </div>
+
+
+</head>
+<body>
+    
+</body>
+</html>

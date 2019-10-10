@@ -1,0 +1,607 @@
+/*
+Reglas
+    Selectores
+    Declaraciones
+    Propiedades
+    Valores
+*/
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?3ot2jt');
+  src:  url('../fonts/icomoon.eot?3ot2jt#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?3ot2jt') format('truetype'),
+    url('../fonts/icomoon.woff?3ot2jt') format('woff'),
+    url('../fonts/icomoon.svg?3ot2jt#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
+
+header {
+    background: pink;
+    color: red
+}
+
+body {
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    margin: 0;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6{
+    /* font-family: 'Fjalla One', sans-serif; */
+    font-weight: normal;
+    /* font-style: italic; */
+}
+
+h1{
+    font-size: 40px;
+    line-height: 1.5em;
+    letter-spacing: -.2px;
+    color: white;
+    /* margin: 100px 100px 100px 100px; */
+    /* text-transform: uppercase;
+    text-decoration: dashed; */
+}
+
+h1 strong {
+    color: #026fff;
+}
+
+h2 {
+    color: #026fff;
+    text-transform: uppercase;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.hero{
+    height: 300px;
+    /* background-image: url('../images/hero.jpg'); */
+    background-color: #1b2127;
+    /* background-size: 500px 300px; */
+    /* background-repeat: no-repeat; */
+    /* background-position-x: right; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.hero-image {
+
+}
+
+.portfolio {
+    background: #fafafa;
+    padding: 20px;
+}
+
+.project {
+    /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-buttom: 10px solid pink; */
+    /* border-color: red;
+    border-width: 15px;
+    border-style: solid; */
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    /* margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 15px; */
+    padding: 20px;
+    /* margin: 10px; */
+    margin-bottom: 15px;
+    background: white;
+    display: flex;
+    /* Para que se acomoden (caigan) los elementos horizontales en el responsive */
+    flex-wrap: wrap;
+}
+
+.project-title {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 10px;
+
+}
+
+.project-course,
+.project-date,
+.project-url {
+    margin: 10px 0;
+}
+
+.project-details {
+    width: 50%;
+    /* height: 200px; */
+}
+
+.project-description {
+    font-size: 20px;
+}
+
+.project-imageContainer{
+    width: 50%;
+    align-items: center;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.header{
+    background-color: #1b2127;
+    color: white;
+    display: flex;
+    /* alto de 90 pixel */
+    height: 70px;
+    align-items: center;
+    /* Espacio entre los elemtnos central */
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.menu-movil {
+    height: inherit;
+    align-items: center;
+}
+
+
+
+.header ol {
+    height: inherit;
+    display: flex;
+    /* Es el alto heredado */
+}
+
+.header ol li {
+    height: inherit;
+}
+
+.header a {
+    display: flex;
+    color:white;
+    text-decoration: none;
+    height: inherit;
+    padding: 0 10px;
+    align-items: center;
+
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
+}
+
+/* selector de etiquetas */
+/* Selector descendente */
+/* body header div nav ol li a */
+/* selector de clase . */
+/* .link */
+/*selector de id # */
+/* #portafolio */
+
+.flexbox{
+    /* Crear bloques adaptables a la pantalla  */
+    display: flex; 
+    /* flex-direction: column; */
+    /* Para que los elementos o box puedasn caer a la parte inferior */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    margin: 20px;
+    /* Capacidad de ecojimiento de los elementos */
+    flex-shrink: 0; 
+}
+
+.footer {
+    color: white;
+    background-color: #1b2127;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer img {
+    vertical-align: middle;
+}
+
+.footer a {
+    color: white;
+}
+
+.event-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event {
+    margin: 1%;
+    width: 48%;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4fbff;
+}
+
+.event img {
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.event-list-title{
+    margin-left: 10px;
+}
+
+.event-detail {
+    margin: 20px 40px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: left;
+}
+
+.event-description {
+    text-align: left;
+}
+
+.event-url {
+    border: 1px solid #056fff;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #056fff;
+    border-radius: 5px;
+}
+
+.contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.social {
+
+}
+
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px;
+}
+
+.social-link.twitter {
+    background-image: url('../images/instagram.svg');
+}
+.social-link.facebook {
+    background-image: url('../images/instagram.svg');
+}
+.social-link.github {
+    background-image: url('../images/instagram.svg');
+}
+.social-link.instagram {
+    background-image: url('../images/instagram.svg');
+}
+
+.form-email input{
+    border-color: gray;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 5px 20px 5px 20px;
+}
+
+.form-email button {
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+    /* margin: 10px auto 0; */
+
+}
+
+.container {
+    max-width: 1000px;
+    /* width: 100%; */
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+
+.html-video {
+    width: 100%;
+    height: auto;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    
+}
+.youtube-video {
+    /* width: 100%; */
+    /* height: auto; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.flexsible-video {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    background: blue;
+    position: relative;
+}
+
+.burger-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: white;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+/* desktop first que empieces desde el Media queri mas grande */
+
+@media screen and (max-width: 1024px) {
+
+
+
+    .container {
+        padding: 0 1em;
+    }
+
+    .hero {
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        padding: 2em;
+    }
+
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+
+
+}
+
+@media screen and (max-width: 767px) {
+
+
+    .burger-button {
+        display: block
+    }
+
+    .header{
+        display: block;
+        height: auto;
+    }
+
+    .header ol {
+        display: block;
+    }
+
+    .header ol li {
+        height: 30px;
+        text-align: center;
+    }
+
+    .header a {
+        justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
+    }
+
+    .header .logo {
+        text-align: center;
+    }
+
+    /* .menu {
+        position: fixed;
+        z-index: 3;
+        background-color: red;
+    } */
+
+    .menu-movil {
+        position: fixed;
+        z-index: 3;
+        background-color: rgba(5, 111, 255, .9);
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .3s;
+    }
+
+    .menu-movil.is-active {
+        left: 0;
+    }
+
+    .header ol {
+        height: auto;
+    }
+
+    .project {
+        display: block;
+        /* font-size: 10px; */
+    }
+ 
+    .project-imageContainer {
+        width: auto;
+    }
+
+    .project-imageContainer img {
+        max-width: 100%;
+        /* font-size: 16px; */
+    }
+
+    .project-details {
+        width: auto;
+    }
+
+    .project-course, .project-date, .project-url {
+        margin: .4em 0;
+    }
+
+    .project-title {
+        font-size: 1.5em;
+        margin-bottom: .3em;
+    }
+
+    .project-url {
+        font-size: 1em;
+    }
+
+    .project-course {
+        font-size: 1.2em;
+    }
+
+    .project-date {
+        font-size: 1em;
+    }
+
+    .project-description {
+        font-size: .8em;
+    }
+
+    .event {
+        width: auto;
+        flex-shrink: initial;
+    }
+
+    .event img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    .project-details {
+        width: auto;
+        font-size: 12px;
+        flex-shrink: initial;
+    }
+    
+    .event-detail {
+        /* margin: -40px 10px 10px 10px; */
+        margin: -2em .5em .5em;
+        padding: 1em;
+    }
+
+    .contact {
+        height: auto;
+        padding: 1.5em 0;
+        text-align: center;
+        display: block;
+    }
+
+    .form-email button {
+        margin: 1em auto;
+    }
+
+    .form-email h3 {
+        margin-top: 0;
+    }
+
+    .footer {
+        display: block;
+        text-align: center;
+        border: 1px solid transparent;
+    }
+}
+    
+@media screen and (max-width: 320px) {
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    .hero {
+        padding: 2em 1em;
+    }
+}
+    

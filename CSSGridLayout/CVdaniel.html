@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Areas</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            display: grid;
+            /* grid-template-columns: 20% 50% 30%; */
+            /* grid-template-rows: 300px 300px; */
+            /* grid-template: filas / columnas; */
+            /* fr */
+            /* grid-template: 300px 150px 200px / 1fr 1fr 1fr; */
+            /* grid-template: 300px 150px 200px / repeat(5, 1fr); */
+            grid-template: 1fr / .5fr 1fr;
+            /* grid-template: 300px 150px 200px / 40% 50% 30%; */
+            /* grid-column-gap: 30px; */
+            /* grid-row-gap: 30px; */
+            /* grid-gap: filas / columnas */
+            grid-gap: 10px;
+            /* Para que utilice el alto completo de la pantalla
+         */ height: 100vh;;
+
+            grid-template-areas: 
+            "left content"
+            "cursos referencias";
+        }
+
+        .item {
+            background: lightblue;
+            padding: 10px;
+            border: 1px solid red;
+            /* margin-right: 30px; */
+        }
+
+        .item:nth-of-type(4) {
+            background: blue;
+            /* Para obtener un scroll  */
+            overflow: auto;
+            /* display: subgrid; */
+            display: grid;
+            grid-template: 50px 50px 50px / 50px 50px 50px;
+        }
+
+        .item .item {
+            background: yellow;
+        }
+
+        .left {
+            grid-area: left;
+        }
+        .content {
+            grid-area: content;
+        }
+        .cursos {
+            grid-area: cursos;
+        }
+        .referencias {
+            grid-area: referencias;
+        }
+        
+    
+    </style>
+
+<body>
+    <section class="container">
+        <div class="item left">Header
+            <div class="item ">Foto</div>
+            <div class="item ">Perfil</div>
+            <div class="item ">Personal</div>
+            <div class="item ">Skills</div>
+        </div>
+        <div class="item content">Content
+            <div class="item ">Nombre</div>
+            <div class="item ">Formacion</div>
+            <div class="item ">Experiencia</div>
+            <div class="item ">Otros
+                <div class="item cursos">cursos</div>
+                <div class="item referencias">referencias</div>
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
